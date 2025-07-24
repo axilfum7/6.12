@@ -1,0 +1,105 @@
+.site-hero {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.site-hero__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.site-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(79, 107, 255, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.site-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.site-hero__left {
+    max-width: 500px;
+}
+
+.site-hero__subtitle {
+    color: #4f6bff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.site-hero__title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    background: linear-gradient(135deg, #ffffff 0%, #a0a9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.site-hero__description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+.site-hero__buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.site-hero__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-hero__illustration {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.site-hero__illustration::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(79, 107, 255, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: -1;
+}
+
+.site-hero__illustration-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 40px rgba(79, 107, 255, 0.3));
+}
